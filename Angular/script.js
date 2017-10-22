@@ -3,8 +3,8 @@
 // Load Dependencies
 var app = angular.module('mainApp', ['ngRoute']);
 
-var totalcost = 200;
-var nmeals = 20;
+var totalcost = 0;
+var nmeals = 0;
 
 app.controller('mainController', function($scope) {} );
 
