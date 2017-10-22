@@ -1,0 +1,34 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        
+        <script type='text/javascript' src='lib/angular.js'></script>
+        <script type='text/javascript' src='lib/angular-route.js'></script>
+        
+        <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
+        <script type='text/javascript' src='lib/bootstrap.js'></script>
+        
+        <script type='text/javascript' src='script.js'></script>
+    </head>
+    
+    <body>
+        <div ng-app='mainApp' ng-controller='mainController'>
+            
+            <div class='container'>
+                This is index.html
+            </div>
+            
+            <div ng-view></div>
+        
+            <div class="card text-center">
+                <div class="card-footer text-muted">
+                    Designed by Franklin Shiao, Richard Ju, and Wilfred Kwok at VandyHacks 2017.
+                </div>
+            </div>
+        
+        </div>
+        
+    </body>
+</html>

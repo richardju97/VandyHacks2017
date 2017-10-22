@@ -16,9 +16,9 @@ router.use(function(req, res, next) {
 
 app.use('/', express.static(path.join(__dirname, '/Angular/')));
 
-app.use('/about', express.static(path.join(__dirname, '/Angular/')));
+//app.use('/about', express.static(path.join(__dirname, '/Angular/')));
 
-app.use('/contact', express.static(path.join(__dirname, '/Angular/')));
+//app.use('/contact', express.static(path.join(__dirname, '/Angular/')));
 
 app.use("*", function(req, res){
 	res.sendFile(path + "404.html");

@@ -24,8 +24,10 @@ app.controller('contactController', function($scope, $http) {
 app.config(function($routeProvider, $locationProvider) {
            
     $routeProvider
-    
+	.when('/404', {
+		templateUrl: template/404.html,
+		controller: '404controller'
+	})        
            
-           
-           $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 });
