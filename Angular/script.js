@@ -36,7 +36,13 @@ app.controller('addgrocController', function($scope, $http) {
 app.controller('addmealController', function($scope, $http) {
                
                $scope.name = "addmealController";
-               });
+               $scope.addMeal = function() {
+               
+                   console.log("Meal Name: " + $scope.mealname);
+                   console.log("Meal Cost: " + $scope.mealcost);
+                   console.log("Meal Date: " + $scope.mealdate);
+               }
+           });
 
 
 app.config(function($routeProvider, $locationProvider) {
