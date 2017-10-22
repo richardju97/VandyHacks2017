@@ -37,11 +37,11 @@ app.config(function($routeProvider, $locationProvider) {
                  controller: 'dashController'
                  })
            
-//           .when('/faq', {
-//
-//                 templateUrl: 'template/faq.html',
-//                 controller: 'aboutController'
-//                 })
+           .when('/addmeal', {
+
+                 templateUrl: 'template/addmeal.html',
+                 controller: 'addmealController'
+                 })
            
 //           .when('/contact', {
 //

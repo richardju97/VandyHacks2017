@@ -20,6 +20,8 @@ app.use('/dashboard', express.static(path.join(__dirname, '/Angular/')));
 
 app.use('/home', express.static(path.join(__dirname, '/Angular/')));
 
+app.use('/addmeal', express.static(path.join(__dirname, '/Angular/')));
+
 //app.use("/home", function(req, res){
 //        res.sendFile(path + "home.html");
 //});
