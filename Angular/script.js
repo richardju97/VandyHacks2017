@@ -45,6 +45,19 @@ app.controller('addmealController', function($scope, $http) {
                    nmeals++;
                    totalcost += $scope.mealcost;
                }
+               
+               $scope.addAnother = function() {
+               
+                   $scope.addMeal();
+                   var frm = document.getElementsByName('meal-form')[0];
+                   frm.reset();
+                   
+               }
+               
+//               $scope.addThenReturn = function() {
+//
+//                   $scope.addMeal();
+//               }
            });
 
 
