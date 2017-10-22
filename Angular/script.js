@@ -41,6 +41,9 @@ app.controller('addmealController', function($scope, $http) {
                    console.log("Meal Name: " + $scope.mealname);
                    console.log("Meal Cost: " + $scope.mealcost);
                    console.log("Meal Date: " + $scope.mealdate);
+               
+                   nmeals++;
+                   totalcost += $scope.mealcost;
                }
            });
 
