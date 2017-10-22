@@ -25,7 +25,7 @@ app.controller('addgrocController', function($scope, $http) {
                $scope.name = "addgrocController";
                $scope.addGroceryItem = function() {
                
-                   console.log("button clicked");
+//                   console.log("button clicked");
                    console.log("Item: " + $scope.itemname);
                    console.log("Type: " + $scope.itemtype);
                    console.log("Amount: " + $scope.itemamount);

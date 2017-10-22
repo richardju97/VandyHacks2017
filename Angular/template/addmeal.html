@@ -1,14 +1,20 @@
 <body>
 	<form class="container">
-		Ingredient 1 and Price:<br>
-			<input type="text" name="ingr1" class="form-control" style="width:500px;">  $<input type="number" step="0.05" name="price1" style="width:100px;"><br><br>
-		Ingredient 2 and Price:<br> 
-			<input type="text" name="ingr2" class="form-control" style="width:500px;">  $<input type="number" step="0.05" name="price2" style="width:100px;"><br><br>
-		Ingredient 3 and Price:<br>
-			<input type="text" name="ingr3" class="form-control" style="width:500px;">  $<input type="number" step="0.05" name="price3" style="width:100px;"><br><br>
-		Ingredient 4 and Price:<br>
-			<input type="text" name="ingr4" class="form-control" style="width:500px;">  $<input type="number" step="0.05" name="price4" style="width:100px;"><br><br>
+<!--        Ingredient 1 and Price:<br>-->
+<!--            <input type="text" ng-model="ingr1" class="form-control" style="width:500px;">  $<input type="number" step="0.05" ng-model="price1" style="width:100px;"><br><br>-->
+<!--        Ingredient 2 and Price:<br> -->
+<!--            <input type="text" ng-model="ingr2" class="form-control" style="width:500px;">  $<input type="number" step="0.05" ng-model="price2" style="width:100px;"><br><br>-->
+<!--        Ingredient 3 and Price:<br>-->
+<!--            <input type="text" ng-model="ingr3" class="form-control" style="width:500px;">  $<input type="number" step="0.05" ng-model="price3" style="width:100px;"><br><br>-->
+<!--        Ingredient 4 and Price:<br>-->
+<!--            <input type="text" ng-model="ingr4" class="form-control" style="width:500px;">  $<input type="number" step="0.05" ng-model="price4" style="width:100px;"><br><br>-->
 
-		<button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+        Meal and Cost:<br>
+            <input type="text" ng-model="mealname" class="form-control" style="width:500px;">
+            $<input type="number" step="0.05" ng-model="mealcost" style="width:100px;">
+            <input type="date" ng-model="mealdate"><br><br>
+
+
+		<input type="submit" ng-model='submitButton' class="btn btn-success" value="Add Meal" ng-click='addMeal()'>
 	</form>
 </body>
