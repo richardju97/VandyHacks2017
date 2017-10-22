@@ -5,22 +5,22 @@
     <form class='container'>
         <div class="form-group">
             <label for="exampleFormControlInput1">Grocery Item</label>
-            <input type="text" class="form-control" id="groceryitem"  >
+            <input type="text" class="form-control" ng-model="itemname"  >
         </div>
         <div class="form-group">
             <label for="groceryitem">Units</label>
-            <select class="form-control" id="groceryitem">
+            <select class="form-control" ng-model="itemtype">
                 <option>Percentage</option>
                 <option>Measurement</option>
             </select>
         </div>
         <div class="form-group">
             <label for="groceryitem">Amount</label>
-            <input class="form-control" id="groceryitem">
+            <input class="form-control" ng-model="itemamount">
         </div>
         <div class="form-group">
             <label for="groceryitem">Cost</label>
-            <input type='number' class="form-control" id="groceryitem">
+            <input type='number' class="form-control" ng-model="itemcost">
         </div>
         
 <!--        <button type="button" class="btn btn-primary" on-click=''>Add Item</button>-->
