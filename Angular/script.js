@@ -16,6 +16,16 @@ var allMeals = [
        {"id":7,"name":"Chipotle","date":"date 1","cost":8.03}
      ];
 
+var allGroceries = [
+                {"id":1,"Item":"Panda Express","Units":"Fri Oct 20 2017 00:00:00 GMT-0500 (CDT)","Amount":"Panda Express","cost":7.81},
+                {"id":2,"Item":"Noodles & I","Units":"date 1","Amount":"Panda Express","cost":9.62},
+                {"id":3,"Item":"Chipotle","Units":"date 1","Amount":"Panda Express","cost":8.03},
+                {"id":4,"Item":"AJ's","Units":"date 1","Amount":"Panda Express","cost":3.20},
+                {"id":5,"Item":"Jimmy John's","Units":"date 1","Amount":"Panda Express","cost":5.14},
+                {"id":6,"Item":"McDonald's","Units":"date 1","Amount":"Panda Express","cost":7.49},
+                {"id":7,"Item":"Chipotle","Units":"date 1","Amount":"Panda Express","cost":8.03}
+                ];
+
 app.controller('mainController', function($scope) {} );
 
 app.controller('homeController', function($scope, $http) {
@@ -35,7 +45,7 @@ app.controller('dashController', function($scope, $filter) {
                    reverse : false
                }
                
-               $scope.gap = 5;
+               $scope.gap = 3;
                
                $scope.filteredItems = [];
                $scope.groupedItems = [];
@@ -176,19 +186,24 @@ app.controller('addmealController', function($scope, $http) {
                $scope.name = "addmealController";
                $scope.addMeal = function() {
                
-                   console.log("Meal Name: " + $scope.mealname);
-                   console.log("Meal Cost: " + $scope.mealcost);
-                   console.log("Meal Date: " + $scope.mealdate);
+                   if ($scope.mealtype.localeCompare("Ordered")) {
+               
+                       console.log("Meal Name: " + $scope.mealname);
+                       console.log("Meal Cost: " + $scope.mealcost);
+                       console.log("Meal Date: " + $scope.mealdate);
 
-                   nmeals++;
-                   totalcost += $scope.mealcost;
+                       nmeals++;
+                       totalcost += $scope.mealcost;
 
-                   allMeals.push({
+                       allMeals.push({
                                  "id":nmeals,
                                  "name":$scope.mealname,
                                  "date":$scope.mealdate,
                                  "cost":$scope.mealcost
-                   });
+                             });
+                   } else {
+               
+                   }
                }
                
                $scope.addAnother = function() {

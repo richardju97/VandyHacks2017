@@ -33,43 +33,43 @@
             <tfoot>
                 <td colspan="6">
                     
-<!--                    <nav aria-label="Page navigation example">-->
-<!--                        <ul class="pagination">-->
-<!--                            <li class="page-item">-->
-<!--                                <a class="page-link" href="#" aria-label="Previous">-->
-<!--                                    <span aria-hidden="true">&laquo;</span>-->
-<!--                                    <span class="sr-only">Previous</span>-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            <li class="page-item"><a class="page-link" href="#">1</a></li>-->
-<!--                            <li class="page-item"><a class="page-link" href="#">2</a></li>-->
-<!--                            <li class="page-item"><a class="page-link" href="#">3</a></li>-->
-<!--                            <li class="page-item">-->
-<!--                                <a class="page-link" href="#" aria-label="Next">-->
-<!--                                    <span aria-hidden="true">&raquo;</span>-->
-<!--                                    <span class="sr-only" ng-click='nextPage()'>Next</span>-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </nav>-->
-
-                    <nav aria-label="Page Nav">
+                    <nav aria-label="Page navigation example">
                         <ul class="pagination">
-                            <li ng-class="{disabled: currentPage == 0}">
-                                <a href ng-click="prevPage()">« Prev</a>
+                            <li class="page-item">
+                                <a class="page-link"  ng-click='prevPage()' href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
                             </li>
-                            
-                            <li ng-repeat="n in range(pagedItems.length, currentPage, currentPage + gap) "
-                                ng-class="{active: n == currentPage}"
-                                ng-click="setPage()">
-                                <a href ng-bind="n + 1">1</a>
-                            </li>
-                            
-                            <li ng-class="{disabled: (currentPage) == pagedItems.length - 1}">
-                                <a href ng-click="nextPage()">Next »</a>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" ng-click='nextPage()' href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </li>
                         </ul>
                     </nav>
+
+<!--                    <nav aria-label="Page Nav">-->
+<!--                        <ul class="pagination">-->
+<!--                            <li class="page-item {disabled: currentPage == 0}">-->
+<!--                                <a href ng-click="prevPage()">« Prev</a>-->
+<!--                            </li>-->
+<!--                            -->
+<!--                            <li ng-repeat="n in range(pagedItems.length, currentPage, currentPage + gap) "-->
+<!--                                class="page-item {active: n == currentPage}"-->
+<!--                                click="setPage()">-->
+<!--                                <a href ng-bind="n + 1">1</a>-->
+<!--                            </li>-->
+<!--                            -->
+<!--                            <li     class="page-item {disabled: (currentPage) == pagedItems.length - 1}">-->
+<!--                                <a href ng-click="nextPage()">Next »</a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </nav>-->
                 </td>
             </tfoot>
             <pre>pagedItems.length: {{pagedItems.length|json}}</pre>
@@ -87,6 +87,7 @@
         
         
         Inventory
+        
     </div>
     
 </body>
