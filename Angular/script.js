@@ -15,10 +15,10 @@ app.controller('dashController', function($scope, $http) {
                
                });
 
-//app.controller('contactController', function($scope, $http) {
-//
-//               $scope.name = "contactController";
-//               });
+app.controller('addgrocController', function($scope, $http) {
+
+               $scope.name = "addgrocController";
+               });
 
 
 app.config(function($routeProvider, $locationProvider) {
@@ -43,11 +43,11 @@ app.config(function($routeProvider, $locationProvider) {
                  controller: 'addmealController'
                  })
            
-//           .when('/contact', {
-//
-//                 templateUrl: 'template/contact.html',
-//                 controller: 'contactController'
-//                 })
+           .when('/add-groceries', {
+
+                 templateUrl: 'template/add-groceries.html',
+                 controller: 'addgrocController'
+                 })
            
            .when('/error404', {
                  

@@ -22,6 +22,8 @@ app.use('/home', express.static(path.join(__dirname, '/Angular/')));
 
 app.use('/addmeal', express.static(path.join(__dirname, '/Angular/')));
 
+app.use('/add-groceries', express.static(path.join(__dirname, '/Angular/')));
+
 //app.use("/home", function(req, res){
 //        res.sendFile(path + "home.html");
 //});
