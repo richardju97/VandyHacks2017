@@ -1,7 +1,7 @@
 
 // myscript.js
 
-var totalcost;
+var totalcost = 200;
 
 function addMeal() {
     

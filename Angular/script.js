@@ -3,6 +3,9 @@
 // Load Dependencies
 var app = angular.module('mainApp', ['ngRoute']);
 
+var totalcost = 200;
+var nmeals = 20;
+
 app.controller('mainController', function($scope) {} );
 
 app.controller('homeController', function($scope, $http) {
@@ -12,7 +15,9 @@ app.controller('homeController', function($scope, $http) {
 
 app.controller('dashController', function($scope, $http) {
                
-               
+               $scope.tcost = totalcost;
+               $scope.acost = totalcost/nmeals;
+               $scope.nummeals = nmeals;
                });
 
 app.controller('addgrocController', function($scope, $http) {
