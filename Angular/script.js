@@ -25,6 +25,11 @@ app.controller('addgrocController', function($scope, $http) {
                $scope.name = "addgrocController";
                });
 
+app.controller('addmealController', function($scope, $http) {
+               
+               $scope.name = "addmealController";
+               });
+
 
 app.config(function($routeProvider, $locationProvider) {
            
