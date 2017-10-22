@@ -69,7 +69,6 @@ app.controller('dashController', function($scope, $filter) {
                
                };
                
-               
                // calculate page in place
                $scope.groupToPages = function () {
                $scope.pagedItems = [];
@@ -116,33 +115,6 @@ app.controller('dashController', function($scope, $filter) {
                
                // functions have been describe process the data for display
                $scope.search();
-
-//               $scope.generateTable = function() {
-//
-//                   var body = document.getElementsByName('body')[0];
-//
-//                   var tbl = document.createElement("table");
-//                   var tblbody = document.createElement("tbody");
-//
-//                   for (var i = 0; i < nmeals; i++) {
-//
-//                       var row = document.createElement("tr");
-//
-//                       for (var j = 0; j < 3; j++) {
-//                           var cell = document.createElement("td");
-//                           var celltxt = document.createTextNode("test");
-//                           cell.appendChild(celltxt);
-//                           row.appendChild(cell);
-//                       }
-//
-//                       tblbody.appendChild(row);
-//                   }
-//
-//                   tbl.appendChild(tblbody);
-//                   body.appendChild(tbl);
-//               }
-//
-//               $scope.generateTable();
        });
 
 app.$inject = ['$scope', '$filter'];
@@ -207,16 +179,16 @@ app.controller('addmealController', function($scope, $http) {
                    console.log("Meal Name: " + $scope.mealname);
                    console.log("Meal Cost: " + $scope.mealcost);
                    console.log("Meal Date: " + $scope.mealdate);
-               
+
+                   nmeals++;
+                   totalcost += $scope.mealcost;
+
                    allMeals.push({
-                                 "id":20,
+                                 "id":nmeals,
                                  "name":$scope.mealname,
                                  "date":$scope.mealdate,
                                  "cost":$scope.mealcost
                    });
-               
-                   nmeals++;
-                   totalcost += $scope.mealcost;
                }
                
                $scope.addAnother = function() {
@@ -224,13 +196,7 @@ app.controller('addmealController', function($scope, $http) {
                    $scope.addMeal();
                    var frm = document.getElementsByName('meal-form')[0];
                    frm.reset();
-               
                }
-               
-//               $scope.addThenReturn = function() {
-//
-//                   $scope.addMeal();
-//               }
            });
 
 
