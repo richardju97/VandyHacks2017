@@ -10,24 +10,56 @@ app.controller('homeController', function($scope, $http) {
                $scope.name = "homeController";
                });
 
-app.controller('aboutController', function($scope, $http) {
+app.controller('dashController', function($scope, $http) {
                
                
                });
 
-app.controller('contactController', function($scope, $http) {
-               
-               $scope.name = "contactController";
-               });
+//app.controller('contactController', function($scope, $http) {
+//
+//               $scope.name = "contactController";
+//               });
 
 
 app.config(function($routeProvider, $locationProvider) {
            
-    $routeProvider
-	.when('/404', {
-		templateUrl: template/404.html,
-		controller: '404controller'
-	})        
+           $routeProvider
            
-    $locationProvider.html5Mode(true);
+           .when('/', {
+                 
+                 templateUrl: 'template/home.html',
+                 controller: 'homeController'
+                 })
+           
+           .when('/dashboard', {
+                 
+                 templateUrl: 'template/dashboard.html',
+                 controller: 'dashController'
+                 })
+           
+//           .when('/faq', {
+//
+//                 templateUrl: 'template/faq.html',
+//                 controller: 'aboutController'
+//                 })
+           
+//           .when('/contact', {
+//
+//                 templateUrl: 'template/contact.html',
+//                 controller: 'contactController'
+//                 })
+           
+           .when('/error404', {
+                 
+                 templateUrl: 'template/404.html',
+                 controller: 'error404Controller'
+                 })
+           
+           .otherwise({
+                      
+                      redirectTo: '/'
+                      });
+           
+           $locationProvider.html5Mode(true);
 });
+

@@ -16,13 +16,21 @@ router.use(function(req, res, next) {
 
 app.use('/', express.static(path.join(__dirname, '/Angular/')));
 
-//app.use('/about', express.static(path.join(__dirname, '/Angular/')));
+app.use('/dashboard', express.static(path.join(__dirname, '/Angular/')));
 
-//app.use('/contact', express.static(path.join(__dirname, '/Angular/')));
+app.use('/home', express.static(path.join(__dirname, '/Angular/')));
 
-app.use("*", function(req, res){
-	res.sendFile(path + "404.html");
-});
+//app.use("/home", function(req, res){
+//        res.sendFile(path + "home.html");
+//});
+//
+//app.use("/dashboard", function(req, res){
+//        res.sendFile(path + "dashboard.html");
+//});
+
+//app.use("*", function(req, res){
+//    res.sendFile(path + "404.html");
+//});
 
 app.listen(process.env.PORT || 3000, function() {
 	console.log("Live at Port 3000");
