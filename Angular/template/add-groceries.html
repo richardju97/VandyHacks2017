@@ -5,7 +5,7 @@
     <form class='container'>
         <div class="form-group">
             <label for="exampleFormControlInput1">Grocery Item</label>
-            <input type="email" class="form-control" id="groceryitem"  >
+            <input type="text" class="form-control" id="groceryitem"  >
         </div>
         <div class="form-group">
             <label for="groceryitem">Units</label>
@@ -20,10 +20,13 @@
         </div>
         <div class="form-group">
             <label for="groceryitem">Cost</label>
-            <input class="form-control" id="groceryitem">
+            <input type='number' class="form-control" id="groceryitem">
         </div>
         
-        <button type="button" class="btn btn-primary" on-click=''>Add Item</button>
+<!--        <button type="button" class="btn btn-primary" on-click=''>Add Item</button>-->
+
+        <input type='submit' ng-model='submitButton' value='Add Item' class='btn btn-success' ng-click='addGroceryItem()'>
+
     </form>
     
 </body>

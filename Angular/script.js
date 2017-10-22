@@ -23,7 +23,11 @@ app.controller('dashController', function($scope, $http) {
 app.controller('addgrocController', function($scope, $http) {
 
                $scope.name = "addgrocController";
-               });
+               $scope.addGroceryItem = function() {
+               
+               console.log("button clicked");
+               };
+           });
 
 app.controller('addmealController', function($scope, $http) {
                
@@ -72,4 +76,3 @@ app.config(function($routeProvider, $locationProvider) {
            
            $locationProvider.html5Mode(true);
 });
-
