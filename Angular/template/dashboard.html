@@ -10,6 +10,7 @@
         
         Total Meal Cost: ${{ tcost }}
         Meals Logged: {{ nummeals }}
+        <script>acost = (acost).toFixed(4);</script>
         Average Meal Cost: ${{ acost }}
 
         <button type="button" class="btn btn-primary" onclick='location.href="/addmeal"'>Add Meal</button>
